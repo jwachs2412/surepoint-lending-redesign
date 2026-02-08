@@ -106,7 +106,8 @@
     flex-direction: row;
   }
 
-  button {
+  button,
+  a {
     width: 100%;
 
     @include tablet {
