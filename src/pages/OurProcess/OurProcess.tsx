@@ -103,6 +103,7 @@ export const OurProcess = () => {
       {/* Process Steps Section */}
       <section className={styles.process}>
         <div className={styles.process__container}>
+          <h2 className="visually-hidden">Our Four-Step Process</h2>
           <div className={styles.process__grid}>
             {processSteps.map((item, index) => (
               <div key={index} className={styles.process__step}>
@@ -128,14 +129,14 @@ export const OurProcess = () => {
 
             <div className={styles.contact__details}>
               <div className={styles.contact__detail}>
-                <h4>Call Us</h4>
+                <h3>Call Us</h3>
                 <a href="tel:+18884445347" className={styles.contact__phone}>
                   888-445-FLIP
                 </a>
               </div>
 
               <div className={styles.contact__detail}>
-                <h4>Email</h4>
+                <h3>Email</h3>
                 <p>
                   <a
                     href="mailto:FLIP@surepointequity.com"
@@ -147,7 +148,7 @@ export const OurProcess = () => {
               </div>
 
               <div className={styles.contact__detail}>
-                <h4>Office</h4>
+                <h3>Office</h3>
                 <p>
                   8001 Lyndon Centre Way
                   <br />
@@ -220,6 +221,7 @@ export const OurProcess = () => {
                   value={formData.loanType}
                   onChange={handleInputChange}
                   className={styles.form__select}
+                  aria-label="Select loan type"
                 >
                   <option value="">Select a loan type</option>
                   <option value="purchase">Purchase + Renovation</option>
@@ -237,6 +239,7 @@ export const OurProcess = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   rows={4}
+                  aria-label="Enter project details"
                   className={styles.form__textarea}
                 />
               </div>

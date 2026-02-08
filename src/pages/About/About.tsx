@@ -154,14 +154,14 @@ export const About = () => {
 
             <div className={styles.contact__details}>
               <div className={styles.contact__detail}>
-                <h4>Call Us</h4>
+                <h3>Call Us</h3>
                 <a href="tel:+18884445347" className={styles.contact__phone}>
                   888-445-FLIP
                 </a>
               </div>
 
               <div className={styles.contact__detail}>
-                <h4>Email</h4>
+                <h3>Email</h3>
                 <p>
                   <a
                     href="mailto:FLIP@surepointequity.com"
@@ -173,7 +173,7 @@ export const About = () => {
               </div>
 
               <div className={styles.contact__detail}>
-                <h4>Office</h4>
+                <h3>Office</h3>
                 <p>
                   8001 Lyndon Centre Way
                   <br />
@@ -246,6 +246,7 @@ export const About = () => {
                   value={formData.loanType}
                   onChange={handleInputChange}
                   className={styles.form__select}
+                  aria-label="Select loan type"
                 >
                   <option value="">Select a loan type</option>
                   <option value="purchase">Purchase + Renovation</option>
@@ -264,6 +265,7 @@ export const About = () => {
                   onChange={handleInputChange}
                   rows={4}
                   className={styles.form__textarea}
+                  aria-label="Enter project details"
                 />
               </div>
 

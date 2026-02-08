@@ -150,13 +150,13 @@ export const Home = () => {
             </p>
             <div className={styles.contact__details}>
               <div className={styles.contact__detail}>
-                <h4>Call Us</h4>
+                <h3>Call Us</h3>
                 <a href="tel:+18884445347" className={styles.contact__phone}>
                   888-445-FLIP
                 </a>
               </div>
               <div className={styles.contact__detail}>
-                <h4>Email</h4>
+                <h3>Email</h3>
                 <p>
                   <a
                     href="mailto:FLIP@surepointequity.com"
@@ -167,7 +167,7 @@ export const Home = () => {
                 </p>
               </div>
               <div className={styles.contact__detail}>
-                <h4>Office</h4>
+                <h3>Office</h3>
                 <p>
                   8001 Lyndon Centre Way
                   <br />
@@ -214,11 +214,14 @@ export const Home = () => {
               </div>
 
               <div className={styles.form__group}>
-                <label className={styles.form__label}>Loan Type</label>
-                <select 
+                <label htmlFor="loanType" className={styles.form__label}>Loan Type</label>
+                <select
+                  id="loanType"
+                  name="loanType"
                   className={styles.form__select}
                   value={formData.loanType}
                   onChange={(e) => setFormData({...formData, loanType: e.target.value})}
+                  aria-label="Select loan type"
                 >
                   <option value="">Select a loan type</option>
                   <option value="purchase">Purchase + Renovation</option>
@@ -227,12 +230,15 @@ export const Home = () => {
               </div>
 
               <div className={styles.form__group}>
-                <label className={styles.form__label}>Project Details</label>
-                <textarea 
+                <label htmlFor="projectDetails" className={styles.form__label}>Project Details</label>
+                <textarea
+                  id="projectDetails"
+                  name="projectDetails"
                   className={styles.form__textarea}
                   value={formData.message}
                   onChange={(e) => setFormData({...formData, message: e.target.value})}
                   rows={4}
+                  aria-label="Enter project details"
                 />
               </div>
 
