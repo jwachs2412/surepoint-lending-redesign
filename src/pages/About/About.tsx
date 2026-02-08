@@ -105,6 +105,8 @@ export const About = () => {
                     src={member.image}
                     alt={member.name}
                     className={styles.team__image}
+                    width="270"
+                    height="270"
                     loading="lazy"
                   />
                 </div>
