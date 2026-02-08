@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Layout } from '@components/layout/Layout/Layout'
+import { ScrollToTop } from '@components/common/ScrollToTop/ScrollToTop'
 import Home from '@pages/Home/Home' // Keep Home eager for better initial load
 
 // Lazy load non-critical routes for code splitting
@@ -37,6 +38,7 @@ const LoadingFallback = () => (
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Layout>
         <Suspense fallback={<LoadingFallback />}>
           <Routes>
