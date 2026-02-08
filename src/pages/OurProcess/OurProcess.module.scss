@@ -100,6 +100,20 @@
   margin: 0 auto;
 }
 
+.process__heading {
+  font-family: $font-display;
+  font-size: 2rem;
+  font-weight: $font-weight-bold;
+  color: $color-primary-navy;
+  text-align: center;
+  margin-bottom: 0.625rem;
+
+  @include desktop {
+    font-size: 2.5rem;
+    margin-bottom: 0.938rem;
+  }
+}
+
 .process__grid {
   display: grid;
   grid-template-columns: 1fr;

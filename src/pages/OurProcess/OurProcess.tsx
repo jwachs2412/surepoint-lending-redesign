@@ -103,7 +103,7 @@ export const OurProcess = () => {
       {/* Process Steps Section */}
       <section className={styles.process}>
         <div className={styles.process__container}>
-          <h2 className="visually-hidden">Our Four-Step Process</h2>
+          <h2 className={styles.process__heading}>Our Four-Step Process</h2>
           <div className={styles.process__grid}>
             {processSteps.map((item, index) => (
               <div key={index} className={styles.process__step}>
