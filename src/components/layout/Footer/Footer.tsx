@@ -35,6 +35,11 @@ export const Footer = () => {
                   FAQs
                 </Link>
               </li>
+              <li>
+                <Link to="/contact" className={styles.footer__link}>
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>

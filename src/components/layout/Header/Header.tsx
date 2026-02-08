@@ -48,26 +48,14 @@ export const Header = () => {
       // Apply overflow hidden and compensate for scrollbar
       document.body.style.overflow = 'hidden'
       document.body.style.paddingRight = `${scrollbarWidth}px`
-
-      // Also apply padding to header since it's position: sticky
-      if (headerRef.current) {
-        headerRef.current.style.paddingRight = `${scrollbarWidth}px`
-      }
     } else {
       document.body.style.overflow = ''
       document.body.style.paddingRight = ''
-
-      if (headerRef.current) {
-        headerRef.current.style.paddingRight = ''
-      }
     }
 
     return () => {
       document.body.style.overflow = ''
       document.body.style.paddingRight = ''
-      if (headerRef.current) {
-        headerRef.current.style.paddingRight = ''
-      }
     }
   }, [isMenuOpen])
 
