@@ -16,8 +16,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://www.google.com" />
 
-    <!-- Optimized font loading with display=swap to prevent FOIT -->
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Async font loading - non-blocking for better mobile performance -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    </noscript>
+
     <meta name="description" content="SurePoint Equity provides short-term financing for real estate investors. Experience fast closings, competitive rates, and flexible terms for fix and flip projects." />
     <meta name="keywords" content="real estate investment loans, fix and flip financing, hard money loans, bridge loans, Louisville Kentucky, SurePoint Equity" />
     <title>SurePoint Equity | Real Estate Investment Lending</title>
