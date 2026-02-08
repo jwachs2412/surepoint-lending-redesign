@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Navy background with rounded corners -->
+  <rect width="64" height="64" fill="#0A2463" rx="12"/>
+
+  <!-- SP monogram -->
+  <g>
+    <!-- S in white for contrast -->
+    <text x="10" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="40" font-weight="900" fill="#FFFFFF" letter-spacing="-2">S</text>
+
+    <!-- P in orange (brand accent) -->
+    <text x="30" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="40" font-weight="900" fill="#FF6B35" letter-spacing="-2">P</text>
+  </g>
+</svg>

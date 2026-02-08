@@ -1,0 +1,77 @@
+@use '@styles/abstracts' as *;
+
+.card {
+  @include transition(all);
+  
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  
+  padding: $card-padding-mobile;
+  background-color: $color-neutral-100;
+  border: $card-border-width solid $color-neutral-300;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-sm;
+
+  @include tablet {
+    padding: $card-padding;
+  }
+
+  &--hoverable {
+    cursor: pointer;
+
+    &:hover {
+      border-color: $accent-teal;
+      box-shadow: $shadow-lg;
+      transform: translateY(-4px);
+    }
+
+    &:active {
+      transform: translateY(-2px);
+      box-shadow: $shadow-md;
+    }
+  }
+}
+
+.card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: $radius-md;
+  background: linear-gradient(135deg, rgba($accent-teal, 0.1), rgba($color-primary-blue, 0.1));
+  color: $color-primary-blue;
+  font-size: 28px;
+
+  svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.card__title {
+  font-family: $font-display;
+  font-size: $font-size-h3-mobile;
+  font-weight: $font-weight-semibold;
+  color: $color-neutral-900;
+  margin: 0;
+
+  @include tablet {
+    font-size: $font-size-h3;
+  }
+}
+
+.card__content {
+  font-size: $font-size-body;
+  line-height: $line-height-relaxed;
+  color: $color-neutral-700;
+
+  p {
+    margin: 0;
+  }
+
+  p + p {
+    margin-top: $spacing-sm;
+  }
+}

@@ -1,0 +1,128 @@
+@use '@styles/abstracts' as *;
+
+/* Display */
+.display {
+  font-family: $font-display;
+  font-size: $font-size-display-mobile;
+  font-weight: $font-weight-extrabold;
+  line-height: $line-height-tight;
+  letter-spacing: $letter-spacing-tight;
+  margin: 0;
+
+  @include tablet {
+    font-size: $font-size-display;
+  }
+}
+
+/* Headings */
+.h1 {
+  font-family: $font-display;
+  font-size: $font-size-h1-mobile;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-snug;
+  letter-spacing: $letter-spacing-tight;
+  margin: 0;
+
+  @include tablet {
+    font-size: $font-size-h1;
+  }
+}
+
+.h2 {
+  font-family: $font-display;
+  font-size: $font-size-h2-mobile;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-snug;
+  margin: 0;
+
+  @include tablet {
+    font-size: $font-size-h2;
+  }
+}
+
+.h3 {
+  font-family: $font-display;
+  font-size: $font-size-h3-mobile;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-snug;
+  margin: 0;
+
+  @include tablet {
+    font-size: $font-size-h3;
+  }
+}
+
+.h4 {
+  font-family: $font-body;
+  font-size: $font-size-h4;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-normal;
+  margin: 0;
+}
+
+/* Body Text */
+.body-lg {
+  font-size: $font-size-body-lg-mobile;
+  line-height: $line-height-relaxed;
+  margin: 0;
+
+  @include tablet {
+    font-size: $font-size-body-lg;
+  }
+}
+
+.body {
+  font-size: $font-size-body;
+  line-height: $line-height-normal;
+  margin: 0;
+}
+
+.small {
+  font-size: $font-size-small;
+  line-height: $line-height-normal;
+  margin: 0;
+}
+
+.xs {
+  font-size: $font-size-xs;
+  line-height: $line-height-normal;
+  margin: 0;
+}
+
+/* Text Colors */
+.text-primary {
+  color: $color-primary-navy;
+}
+
+.text-blue {
+  color: $color-primary-blue;
+}
+
+.text-teal {
+  color: $accent-teal;
+}
+
+.text-orange {
+  color: $accent-orange;
+}
+
+.text-neutral {
+  color: $color-neutral-700;
+}
+
+.text-white {
+  color: $color-neutral-100;
+}
+
+/* Text Alignment */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}

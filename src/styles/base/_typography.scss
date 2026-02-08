@@ -1,0 +1,150 @@
+@use '../abstracts' as *;
+
+/* Typography Base Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: $font-body;
+  font-size: $font-size-body;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-normal;
+  color: $color-neutral-900;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Display */
+.display {
+  font-family: $font-display;
+  font-size: $font-size-display-mobile;
+  font-weight: $font-weight-extrabold;
+  line-height: $line-height-tight;
+  letter-spacing: $letter-spacing-tight;
+  margin: 0;
+
+  @include tablet {
+    font-size: $font-size-display;
+  }
+}
+
+/* Headings */
+h1, .h1 {
+  font-family: $font-display;
+  font-size: $font-size-h1-mobile;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-snug;
+  letter-spacing: $letter-spacing-tight;
+  margin: 0;
+
+  @include tablet {
+    font-size: $font-size-h1;
+  }
+}
+
+h2, .h2 {
+  font-family: $font-display;
+  font-size: $font-size-h2-mobile;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-snug;
+  margin: 0;
+
+  @include tablet {
+    font-size: $font-size-h2;
+  }
+}
+
+h3, .h3 {
+  font-family: $font-display;
+  font-size: $font-size-h3-mobile;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-snug;
+  margin: 0;
+
+  @include tablet {
+    font-size: $font-size-h3;
+  }
+}
+
+h4, .h4 {
+  font-family: $font-body;
+  font-size: $font-size-h4;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-normal;
+  margin: 0;
+}
+
+/* Body Text */
+.body-lg {
+  font-size: $font-size-body-lg-mobile;
+  line-height: $line-height-relaxed;
+  margin: 0;
+
+  @include tablet {
+    font-size: $font-size-body-lg;
+  }
+}
+
+.body {
+  font-size: $font-size-body;
+  line-height: $line-height-normal;
+  margin: 0;
+}
+
+.small {
+  font-size: $font-size-small;
+  line-height: $line-height-normal;
+  margin: 0;
+}
+
+.xs {
+  font-size: $font-size-xs;
+  line-height: $line-height-normal;
+  margin: 0;
+}
+
+/* Font Weights */
+.font-light {
+  font-weight: $font-weight-light;
+}
+
+.font-regular {
+  font-weight: $font-weight-regular;
+}
+
+.font-medium {
+  font-weight: $font-weight-medium;
+}
+
+.font-semibold {
+  font-weight: $font-weight-semibold;
+}
+
+.font-bold {
+  font-weight: $font-weight-bold;
+}
+
+/* Colors */
+.text-primary {
+  color: $color-primary-navy;
+}
+
+.text-blue {
+  color: $color-primary-blue;
+}
+
+.text-teal {
+  color: $accent-teal;
+}
+
+.text-orange {
+  color: $accent-orange;
+}
+
+.text-neutral {
+  color: $color-neutral-700;
+}
+
+.text-white {
+  color: $color-neutral-100;
+}

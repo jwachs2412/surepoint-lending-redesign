@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <!-- Navy background -->
+  <rect width="180" height="180" fill="#0A2463" rx="40"/>
+
+  <!-- Large SP monogram for iOS -->
+  <g>
+    <!-- S in white -->
+    <text x="28" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="112" font-weight="900" fill="#FFFFFF" letter-spacing="-5">S</text>
+
+    <!-- P in orange -->
+    <text x="84" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="112" font-weight="900" fill="#FF6B35" letter-spacing="-5">P</text>
+  </g>
+</svg>

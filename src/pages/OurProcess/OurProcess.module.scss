@@ -1,0 +1,392 @@
+@use '@styles/abstracts' as *;
+
+.our_process {
+  width: 100%;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.hero {
+  background: $gradient-primary;
+  padding: 2.5rem 1.5rem;
+  color: $color-neutral-100;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  @include tablet {
+    padding: 4rem 2rem;
+  }
+
+  @include desktop {
+    padding: 6rem 2rem;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(circle at 20% 50%, rgba($accent-teal, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba($accent-orange, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+}
+
+.hero__content {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero__title {
+  font-family: $font-display;
+  font-size: 2rem;
+  font-weight: $font-weight-extrabold;
+  line-height: 1.1;
+  margin-bottom: $spacing-md;
+
+  @include tablet {
+    font-size: 2.75rem;
+  }
+
+  @include desktop {
+    font-size: 3.5rem;
+  }
+}
+
+.hero__subtitle {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba($color-neutral-100, 0.9);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include tablet {
+    font-size: 1.125rem;
+  }
+
+  @include desktop {
+    font-size: 1.25rem;
+  }
+}
+
+/* ========================================
+   PROCESS STEPS SECTION
+   ======================================== */
+
+.process {
+  padding: 2rem 1rem;
+  background: $color-neutral-100;
+
+  @include tablet {
+    padding: 3rem 2rem;
+  }
+
+  @include desktop {
+    padding: $spacing-2xl $spacing-md;
+  }
+}
+
+.process__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.process__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+.process__step {
+  text-align: center;
+  padding: $spacing-lg;
+  background: $color-neutral-200;
+  border-radius: $radius-lg;
+  transition: all $transition-base;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-md;
+  }
+}
+
+.process__step_number {
+  font-family: $font-display;
+  font-size: 1.25rem;
+  font-weight: $font-weight-bold;
+  color: $accent-teal;
+  margin-bottom: $spacing-md;
+
+  @include desktop {
+    font-size: 1.5rem;
+  }
+}
+
+.process__icon {
+  font-size: 3rem;
+  margin-bottom: $spacing-md;
+  line-height: 1;
+
+  @include desktop {
+    font-size: 3.5rem;
+  }
+}
+
+.process__description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: $color-neutral-700;
+
+  @include desktop {
+    font-size: 1.05rem;
+  }
+}
+
+.process__link {
+  color: $accent-teal;
+  text-decoration: none;
+  font-weight: $font-weight-semibold;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-primary-blue;
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    @include focus-outline;
+  }
+}
+
+/* ========================================
+   CONTACT SECTION (Reused from Home)
+   ======================================== */
+
+.contact {
+  padding: 2rem 1rem;
+  background: $color-neutral-200;
+
+  @include tablet {
+    padding: 3rem 2rem;
+  }
+
+  @include desktop {
+    padding: $spacing-2xl $spacing-md;
+  }
+}
+
+.contact__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+
+  @include desktop {
+    grid-template-columns: 1fr 1.2fr;
+    gap: $spacing-xl;
+  }
+}
+
+.contact__info {
+  background: $color-primary-navy;
+  color: $color-neutral-100;
+  padding: 2rem;
+  border-radius: $radius-lg;
+
+  @include tablet {
+    padding: 2.5rem;
+  }
+
+  @include desktop {
+    padding: $spacing-xl;
+  }
+}
+
+.contact__heading {
+  font-family: $font-display;
+  font-size: 1.75rem;
+  font-weight: $font-weight-bold;
+  margin-bottom: 1rem;
+
+  @include desktop {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.contact__text {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+
+  @include desktop {
+    font-size: 1.1rem;
+  }
+}
+
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  @include desktop {
+    gap: 2rem;
+  }
+}
+
+.contact__detail {
+  h4 {
+    font-family: $font-display;
+    font-weight: $font-weight-semibold;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin: 0;
+
+    @include desktop {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.contact__phone {
+  @include transition(color);
+
+  font-size: 1.35rem;
+  font-weight: $font-weight-bold;
+  color: $accent-teal;
+  text-decoration: none;
+  display: block;
+
+  @include desktop {
+    font-size: 1.5rem;
+  }
+
+  &:hover {
+    color: $color-neutral-100;
+  }
+
+  &:focus-visible {
+    @include focus-outline;
+  }
+}
+
+.contact__form {
+  background: $color-neutral-100;
+  padding: 2rem;
+  border-radius: $radius-lg;
+  box-shadow: 0 8px 32px rgba(10, 36, 99, 0.08);
+
+  @include tablet {
+    padding: 2.5rem;
+  }
+
+  @include desktop {
+    padding: $spacing-xl;
+  }
+
+  h3 {
+    font-family: $font-display;
+    font-size: 1.6rem;
+    font-weight: $font-weight-bold;
+    color: $color-primary-navy;
+    margin-bottom: 1.5rem;
+
+    @include desktop {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+/* Form Styles */
+.form__group {
+  margin-bottom: $spacing-md;
+}
+
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-md;
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form__label {
+  display: block;
+  font-family: $font-display;
+  font-weight: $font-weight-semibold;
+  color: $color-primary-navy;
+  margin-bottom: $spacing-xs;
+  font-size: 0.95rem;
+}
+
+.form__input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid $color-neutral-300;
+  border-radius: $radius-md;
+  font-family: $font-body;
+  font-size: 1rem;
+  transition: all $transition-base;
+  background: $color-neutral-200;
+
+  &:focus {
+    outline: none;
+    border-color: $accent-teal;
+    background: $color-neutral-100;
+    box-shadow: 0 0 0 4px rgba($accent-teal, 0.1);
+  }
+}
+
+.form__select,
+.form__textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid $color-neutral-300;
+  border-radius: $radius-md;
+  font-family: $font-body;
+  font-size: 1rem;
+  transition: all $transition-base;
+  background: $color-neutral-200;
+
+  &:focus {
+    outline: none;
+    border-color: $accent-teal;
+    background: $color-neutral-100;
+    box-shadow: 0 0 0 4px rgba($accent-teal, 0.1);
+  }
+}
+
+.form__textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form__select {
+  cursor: pointer;
+}

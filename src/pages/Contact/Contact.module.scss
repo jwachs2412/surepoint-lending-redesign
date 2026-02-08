@@ -1,0 +1,246 @@
+@use '@styles/abstracts' as *;
+
+.contact {
+  width: 100%;
+}
+
+/* ========================================
+   MAP SECTION
+   ======================================== */
+
+.map_section {
+  width: 100%;
+  background: $color-neutral-200;
+}
+
+.map_container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+
+  @include tablet {
+    height: 500px;
+  }
+
+  @include desktop {
+    height: 600px;
+  }
+
+  iframe {
+    display: block;
+  }
+}
+
+/* ========================================
+   CONTACT SECTION
+   ======================================== */
+
+.contact_section {
+  padding: 2rem 1rem;
+  background: $color-neutral-200;
+
+  @include tablet {
+    padding: 3rem 2rem;
+  }
+
+  @include desktop {
+    padding: $spacing-2xl $spacing-md;
+  }
+}
+
+.contact_section__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+
+  @include desktop {
+    grid-template-columns: 1fr 1.2fr;
+    gap: $spacing-xl;
+  }
+}
+
+.contact__info {
+  background: $color-primary-navy;
+  color: $color-neutral-100;
+  padding: 2rem;
+  border-radius: $radius-lg;
+
+  @include tablet {
+    padding: 2.5rem;
+  }
+
+  @include desktop {
+    padding: $spacing-xl;
+  }
+}
+
+.contact__heading {
+  font-family: $font-display;
+  font-size: 1.75rem;
+  font-weight: $font-weight-bold;
+  margin-bottom: 1rem;
+
+  @include desktop {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.contact__text {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+
+  @include desktop {
+    font-size: 1.1rem;
+  }
+}
+
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  @include desktop {
+    gap: 2rem;
+  }
+}
+
+.contact__detail {
+  h4 {
+    font-family: $font-display;
+    font-weight: $font-weight-semibold;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin: 0;
+
+    @include desktop {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.contact__phone {
+  @include transition(color);
+
+  font-size: 1.35rem;
+  font-weight: $font-weight-bold;
+  color: $accent-teal;
+  text-decoration: none;
+  display: block;
+
+  @include desktop {
+    font-size: 1.5rem;
+  }
+
+  &:hover {
+    color: $color-neutral-100;
+  }
+
+  &:focus-visible {
+    @include focus-outline;
+  }
+}
+
+.contact__form {
+  background: $color-neutral-100;
+  padding: 2rem;
+  border-radius: $radius-lg;
+  box-shadow: 0 8px 32px rgba(10, 36, 99, 0.08);
+
+  @include tablet {
+    padding: 2.5rem;
+  }
+
+  @include desktop {
+    padding: $spacing-xl;
+  }
+
+  h3 {
+    font-family: $font-display;
+    font-size: 1.6rem;
+    font-weight: $font-weight-bold;
+    color: $color-primary-navy;
+    margin-bottom: 1.5rem;
+
+    @include desktop {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+/* Form Styles */
+.form__group {
+  margin-bottom: $spacing-md;
+}
+
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-md;
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form__label {
+  display: block;
+  font-family: $font-display;
+  font-weight: $font-weight-semibold;
+  color: $color-primary-navy;
+  margin-bottom: $spacing-xs;
+  font-size: 0.95rem;
+}
+
+.form__input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid $color-neutral-300;
+  border-radius: $radius-md;
+  font-family: $font-body;
+  font-size: 1rem;
+  transition: all $transition-base;
+  background: $color-neutral-200;
+
+  &:focus {
+    outline: none;
+    border-color: $accent-teal;
+    background: $color-neutral-100;
+    box-shadow: 0 0 0 4px rgba($accent-teal, 0.1);
+  }
+}
+
+.form__select,
+.form__textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid $color-neutral-300;
+  border-radius: $radius-md;
+  font-family: $font-body;
+  font-size: 1rem;
+  transition: all $transition-base;
+  background: $color-neutral-200;
+
+  &:focus {
+    outline: none;
+    border-color: $accent-teal;
+    background: $color-neutral-100;
+    box-shadow: 0 0 0 4px rgba($accent-teal, 0.1);
+  }
+}
+
+.form__textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form__select {
+  cursor: pointer;
+}

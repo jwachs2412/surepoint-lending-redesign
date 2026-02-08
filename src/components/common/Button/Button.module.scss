@@ -1,0 +1,111 @@
+@use '@styles/abstracts' as *;
+
+.button {
+  @include touch-target;
+  @include transition(all);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-xs;
+  
+  font-family: $font-body;
+  font-weight: $font-weight-semibold;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  
+  border: $border-width-medium solid transparent;
+  border-radius: $radius-md;
+  cursor: pointer;
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &:focus-visible {
+    @include focus-outline;
+  }
+}
+
+/* Sizes */
+.button--small {
+  padding: 0.5rem 1rem;
+  font-size: $font-size-small;
+  min-height: 36px;
+}
+
+.button--medium {
+  padding: $button-padding-y-mobile $button-padding-x-mobile;
+  font-size: $font-size-body;
+
+  @include tablet {
+    padding: $button-padding-y $button-padding-x;
+  }
+}
+
+.button--large {
+  padding: 1rem 2.5rem;
+  font-size: $font-size-body-lg;
+  min-height: 56px;
+
+  @include tablet {
+    padding: 1.25rem 3rem;
+  }
+}
+
+/* Variants */
+.button--primary {
+  background: $gradient-cta;
+  color: $color-neutral-100;
+  border-color: transparent;
+  box-shadow: $shadow-cta;
+
+  &:hover:not(:disabled) {
+    box-shadow: $shadow-cta-hover;
+    transform: translateY(-2px);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+}
+
+.button--secondary {
+  background: $gradient-primary;
+  color: $color-neutral-100;
+  border-color: transparent;
+  box-shadow: $shadow-md;
+
+  &:hover:not(:disabled) {
+    box-shadow: $shadow-lg;
+    transform: translateY(-2px);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+}
+
+.button--outline {
+  background: transparent;
+  color: $color-primary-blue;
+  border-color: $color-primary-blue;
+
+  &:hover:not(:disabled) {
+    background: $color-primary-blue;
+    color: $color-neutral-100;
+    box-shadow: $shadow-md;
+  }
+
+  &:active:not(:disabled) {
+    box-shadow: $shadow-sm;
+  }
+}
+
+/* Full width */
+.button--full-width {
+  width: 100%;
+}

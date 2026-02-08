@@ -1,0 +1,14 @@
+/**
+ * SurePoint Equity - Main SCSS Entry Point
+ * Using modern @use syntax
+ */
+
+// Base styles
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/global';
+
+// Layout
+@use 'layout/grid';
+
+// Components and pages will be imported via CSS Modules in React components

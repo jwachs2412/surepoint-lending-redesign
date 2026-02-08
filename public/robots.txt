@@ -1,0 +1,15 @@
+# robots.txt for SurePoint Equity
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow crawling of admin or sensitive areas (if any exist)
+# Disallow: /admin/
+# Disallow: /api/
+
+# Sitemap location
+Sitemap: https://surepointequity.com/sitemap.xml
+
+# Crawl delay (optional, adjust as needed)
+# Crawl-delay: 1
