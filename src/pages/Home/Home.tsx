@@ -20,9 +20,10 @@ export const Home = () => {
   const scrollToForm = () => {
     const formSection = document.getElementById('contact-form')
     if (formSection) {
-      // Get the contact__container element (the actual content container)
-      const container = formSection.querySelector('[class*="contact__container"]')
-      const targetElement = container || formSection
+      // Get the contact__form element (the actual "Send Us a Message" form)
+      // This ensures we scroll to the form on mobile/tablet where it's stacked below "Let's Do This"
+      const formElement = formSection.querySelector('[class*="contact__form"]')
+      const targetElement = formElement || formSection
 
       // Get the header height from CSS variable
       const headerOffset = parseInt(
