@@ -20,7 +20,24 @@ export const Home = () => {
   const scrollToForm = () => {
     const formSection = document.getElementById('contact-form')
     if (formSection) {
-      formSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      // Get the header height from CSS variable
+      const headerOffset = parseInt(
+        getComputedStyle(document.documentElement).getPropertyValue('--header-offset') || '73',
+        10
+      )
+
+      // Add a small buffer for better UX (8px)
+      const offset = headerOffset + 8
+
+      // Calculate the position to scroll to
+      const elementPosition = formSection.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.scrollY - offset
+
+      // Scroll to the calculated position
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
     }
   }
 
