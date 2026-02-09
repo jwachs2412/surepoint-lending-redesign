@@ -26,8 +26,12 @@ export const Home = () => {
         10
       )
 
-      // Add a small buffer for better UX (8px)
-      const offset = headerOffset + 8
+      // Get the section's top padding (which varies by device)
+      const sectionStyles = getComputedStyle(formSection)
+      const sectionPaddingTop = parseInt(sectionStyles.paddingTop, 10)
+
+      // Total offset: header height + section padding to bring content to just below header
+      const offset = headerOffset + sectionPaddingTop
 
       // Calculate the position to scroll to
       const elementPosition = formSection.getBoundingClientRect().top
