@@ -20,22 +20,19 @@ export const Home = () => {
   const scrollToForm = () => {
     const formSection = document.getElementById('contact-form')
     if (formSection) {
+      // Get the contact__container element (the actual content container)
+      const container = formSection.querySelector('[class*="contact__container"]')
+      const targetElement = container || formSection
+
       // Get the header height from CSS variable
       const headerOffset = parseInt(
         getComputedStyle(document.documentElement).getPropertyValue('--header-offset') || '73',
         10
       )
 
-      // Get the section's top padding (which varies by device)
-      const sectionStyles = getComputedStyle(formSection)
-      const sectionPaddingTop = parseInt(sectionStyles.paddingTop, 10)
-
-      // Total offset: header height + section padding to bring content to just below header
-      const offset = headerOffset + sectionPaddingTop
-
       // Calculate the position to scroll to
-      const elementPosition = formSection.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.scrollY - offset
+      const elementPosition = targetElement.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.scrollY - headerOffset
 
       // Scroll to the calculated position
       window.scrollTo({
