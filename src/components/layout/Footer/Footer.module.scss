@@ -3,7 +3,7 @@
 .footer {
   background: $color-neutral-900;
   color: $color-neutral-100;
-  padding: $spacing-xl $spacing-md;
+  padding: $spacing-xl $spacing-md $spacing-md;
 }
 
 .footer__content {
@@ -25,6 +25,22 @@
 .footer__section {
   display: flex;
   flex-direction: column;
+}
+
+.footer__disclaimer {
+  display: block;
+  margin-block: 2.5rem 0;
+
+  p {
+    color: rgba($color-neutral-100, 0.7);
+    font-size: 0.688rem;
+    max-inline-size: 100%;
+    text-align: center;
+
+    @include tablet {
+      font-size: 0.875rem;
+    }
+  }
 }
 
 .footer__heading {
@@ -51,7 +67,7 @@
 
 .footer__link {
   @include transition(color);
-  
+
   color: rgba($color-neutral-100, 0.7);
   text-decoration: none;
 

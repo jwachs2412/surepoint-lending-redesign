@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import styles from './Footer.module.scss'
 
+const currentYear = new Date().getFullYear()
+
 export const Footer = () => {
   return (
     <footer className={styles.footer}>
@@ -9,8 +11,10 @@ export const Footer = () => {
         <div className={styles.footer__section}>
           <h4 className={styles.footer__heading}>SurePoint Equity</h4>
           <p className={styles.footer__address}>
-            8001 Lyndon Centre Way<br />
-            Suite 101<br />
+            8001 Lyndon Centre Way
+            <br />
+            Suite 101
+            <br />
             Louisville, KY 40222
           </p>
         </div>
@@ -60,6 +64,15 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
+      </div>
+
+      {/* Disclaimer */}
+      <div className={styles.footer__disclaimer}>
+        <p>
+          &copy; {currentYear} SurePoint. All loan approvals are subject to underwriting review.
+          Actual terms, rates and fees determined on a case by case basis. Properties must be
+          non-owner occupied, SFR
+        </p>
       </div>
     </footer>
   )
