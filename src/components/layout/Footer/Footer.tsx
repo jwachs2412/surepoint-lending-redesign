@@ -53,12 +53,12 @@ export const Footer = () => {
           <h4 className={styles.footer__heading}>Legal</h4>
           <ul className={styles.footer__links}>
             <li>
-              <a href="#" className={styles.footer__link}>
+              <a href="/privacy-policy" className={styles.footer__link}>
                 Privacy Policy
               </a>
             </li>
             <li>
-              <a href="#" className={styles.footer__link}>
+              <a href="/terms-and-conditions" className={styles.footer__link}>
                 Terms & Conditions
               </a>
             </li>
