@@ -16,21 +16,17 @@ export const Header = () => {
 
   // Dynamically measure and set header height
   useEffect(() => {
-    const updateHeaderHeight = () => {
-      if (headerRef.current) {
-        const height = headerRef.current.offsetHeight
-        document.documentElement.style.setProperty('--header-offset', `${height}px`)
-      }
-    }
+    if (!headerRef.current) return
 
-    // Set initial height
-    updateHeaderHeight()
+    const observer = new ResizeObserver(([entry]) => {
+      const height = entry.borderBoxSize?.[0]?.blockSize ?? entry.target.getBoundingClientRect().height
+      document.documentElement.style.setProperty('--header-offset', `${height}px`)
+    })
 
-    // Update on resize
-    window.addEventListener('resize', updateHeaderHeight)
+    observer.observe(headerRef.current)
 
     return () => {
-      window.removeEventListener('resize', updateHeaderHeight)
+      observer.disconnect()
     }
   }, [])
 
